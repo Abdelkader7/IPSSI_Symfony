@@ -3,7 +3,9 @@ php: '7.2.9'
 
 before install: true
 
-install: true
+install: 
+- echo "salut"
+- echo "Test"
 
 before script : true
 
