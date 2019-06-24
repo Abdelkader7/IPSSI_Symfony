@@ -4,8 +4,7 @@ php: '7.3'
 before install: true
 
 install: 
-- echo "salut"
-- echo "Test"
+- composer install
 
 before script : true
 
