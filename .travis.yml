@@ -9,6 +9,7 @@ install:
 
 before script : true
 
-script: true
+script: 
+  -phpunit
 
 after script: true
