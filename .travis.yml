@@ -1,5 +1,5 @@
 langage: 'php'
-php: '7.2.9' 
+php: '7.3' 
 
 before install: true
 
