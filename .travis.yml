@@ -1,0 +1,12 @@
+langage: 'php'
+php: '7.2.9' 
+
+before install: false
+
+install: false
+
+before script : false
+
+script: false
+
+
