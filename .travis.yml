@@ -3,7 +3,7 @@ php: '7.3'
 
 cache: 
     directories:
-        - $HOME/.composer/cache
+        - "$HOME/.composer/cache"
 before install: true
 
 install: 
@@ -12,11 +12,8 @@ install:
 before script : true
 
 script: 
+  - "./vendor/bin/php-cs-fixer fix --dry-run --diff --verbose"
   - phpunit tests
 
 after script: true
 
-deploy:
-  provider: heroku
-  api_key:
-    secure: encrypt $(heroku auth:token)
