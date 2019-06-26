@@ -1,0 +1,18 @@
+image : "php:7.3"
+before script: 
+echo « installation »
+Stage: 
+etape 1
+etape 2 
+
+etape1_command1:
+stage: etape1
+script: echo « command 1 » 
+
+etape1_command2:
+stage: etape2
+script: echo « command 2 » 
+
+etape2_command1:
+stage: etape2
+script: echo « command 1 » 
