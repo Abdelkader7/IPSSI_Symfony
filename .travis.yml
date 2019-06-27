@@ -23,4 +23,7 @@ after_script: true
 deploy:
   provider: heroku
   api_key: 0bd3939f-b6e9-4d4c-b1a2-0c255c93abf9
+   app: ipssisymfony
+  on:
+    repo: Abdelkader7/IPSSI_Symfony
 
