@@ -22,8 +22,9 @@ after_script: true
 
 deploy:
   provider: heroku
-  api_key: 0bd3939f-b6e9-4d4c-b1a2-0c255c93abf9
-   app: ipssisymfony
+  api_key: 
+    secure: Pu4wbQP/tigo2+t8zAEXQJW3+SL4QTCPUMlT/xVZuJO6HQzXZjHV/uRJqP7ssr8zgD26uaeXNBbsZoF5L1eaWhZ8dqOpm1ukigtXS5Yz2noSF3wXwCHqrSinYg1mtJavnzqt/7vx7rji5Iwq3ltvkCQ0djCai74ANaqjxtZ1dMHWSfRwLHB8lZul8tiXTfh+csb5Q2X0kJg+kMCVUfWi593rh0RJpkGvnpaEgKwI+PPLNt0m95vQMpmR6MDIFFcF1SvHM3POv0OALfy5waQXEnfoJL4NxdPVGOwy2CgIKNud7H/0FKGREuSH1D+Y7wJ4LtuUlDOLvC92ZEd5nTAkFdYxgkIhDGhRdAuqPvvUiQ5JI2AU6GpMxm/HydJz2fmKu1UvjAuMr2riL/wL3+JiTUPCuDy7OhLnloHyGmbElX3XGwI8G1YQ+xpw6xrASte90SwCLm4NMB879X3j8ZaCqUm5jbsTB17cgc1IFfhISxaKSt1d8j81jlO5rh7+T5P4gzsI8DR8lrz5PRobkDR6JvrSN1j5fruPzsjDrJd3VfAcWWump321sOhCCWqN00dIvNAVprKtUPnEx4y3IDfWbKvKa1Z0twENh8zT8iyO//Hc2ztuzw/tmfmDxu98gGmnRDVjJfW6k1OcqGUiEczZC1Q8KtEjhek0k0gZsmcptWM=
+  app: ipssisymfony
   on:
     repo: Abdelkader7/IPSSI_Symfony
 
