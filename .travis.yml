@@ -10,7 +10,5 @@ before script : true
 
 script: 
   - phpunit tests
-  - echo "salut"
-  - echo "test"
-#
+
 after script: true
