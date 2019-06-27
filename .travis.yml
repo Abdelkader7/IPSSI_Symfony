@@ -12,7 +12,8 @@ install:
 before script : true
 
 script: 
-  - "./vendor/bin/php-cs-fixer fix --dry-run --diff --verbose"
+ # - "./vendor/bin/php-cs-fixer fix --dry-run --diff --verbose"
+  - docker run -v $PWD:/app -w /app php:7.3-cli  ./vendor/bin/php-cs-fixer fix --dry-run --diff --verbose
   - phpunit tests
 
 after script: true
