@@ -15,7 +15,8 @@ before_script: true
 
 script:
   - ./vendor/bin/php-cs-fixer fix --dry-run --diff
-  - docker run -v $(pwd):/app --rm phpunit/phpunit run tests
+  - phpunit tests
+  #docker run -v $(pwd):/app --rm phpunit/phpunit run tests
 
 after_script: true
 
