@@ -1,14 +1,31 @@
-langage: 'php'
-php: '7.3' 
+language : php
+php :
+  - '7.3'
 
-before install: true
+cache:
+  directories:
+    - $HOME/.composer/cache
 
-install: 
-- composer install
+before_install: true
 
-before script : true
+install :
+  - composer install
 
-script: 
+before_script: true
+
+script:
+  - ./vendor/bin/php-cs-fixer fix --dry-run --diff
   - phpunit tests
+  #docker run -v $(pwd):/app --rm phpunit/phpunit run tests
 
-after script: true
+after_script: true
+
+
+deploy:
+  provider: heroku
+  api_key: 
+    secure: Pu4wbQP/tigo2+t8zAEXQJW3+SL4QTCPUMlT/xVZuJO6HQzXZjHV/uRJqP7ssr8zgD26uaeXNBbsZoF5L1eaWhZ8dqOpm1ukigtXS5Yz2noSF3wXwCHqrSinYg1mtJavnzqt/7vx7rji5Iwq3ltvkCQ0djCai74ANaqjxtZ1dMHWSfRwLHB8lZul8tiXTfh+csb5Q2X0kJg+kMCVUfWi593rh0RJpkGvnpaEgKwI+PPLNt0m95vQMpmR6MDIFFcF1SvHM3POv0OALfy5waQXEnfoJL4NxdPVGOwy2CgIKNud7H/0FKGREuSH1D+Y7wJ4LtuUlDOLvC92ZEd5nTAkFdYxgkIhDGhRdAuqPvvUiQ5JI2AU6GpMxm/HydJz2fmKu1UvjAuMr2riL/wL3+JiTUPCuDy7OhLnloHyGmbElX3XGwI8G1YQ+xpw6xrASte90SwCLm4NMB879X3j8ZaCqUm5jbsTB17cgc1IFfhISxaKSt1d8j81jlO5rh7+T5P4gzsI8DR8lrz5PRobkDR6JvrSN1j5fruPzsjDrJd3VfAcWWump321sOhCCWqN00dIvNAVprKtUPnEx4y3IDfWbKvKa1Z0twENh8zT8iyO//Hc2ztuzw/tmfmDxu98gGmnRDVjJfW6k1OcqGUiEczZC1Q8KtEjhek0k0gZsmcptWM=
+  app: ipssisymfony
+  on:
+    repo: Abdelkader7/IPSSI_Symfony
+

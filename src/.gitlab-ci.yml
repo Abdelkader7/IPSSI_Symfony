@@ -1,0 +1,13 @@
+image: docker
+services: 
+  - docker: dind
+
+  before script:
+    - docker run composer -v $PWD:/app install
+
+stage:
+  - test
+
+mon_script_test: 
+stage: test
+script: docker run -v $PWD:/app -w /app php:7.3-cli  ./vendor/bin/php-cs-fixer fix --dry-run --diff --verbose
